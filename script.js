@@ -1,9 +1,56 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+const keys = {
+  //generateBtn = document.querySelector("#generate")
+  uppercaseLetters: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowercaseLetters: "abcdefghijklmnopqrstuvwxyz",
+  numbersAll: "1234567890",
+  specialCharactersAll: " !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~"
+}
 
+
+
+
+function generatePassword(choices) {
+  var newPassword = "";
+  //TODO Step 2
+// choices = "un"
+// loop through password length
+
+  // randomly choose letter from "un". Ex: It will be 'u' or 'n'
+  // based on this letter, check for 'u', 'l', 'n', or 's'
+  // do if statements 
+
+    // randomly choose letter from uppercaseLetters or numbersAll
+    // add letter into string
+    // return that string
+
+const getKey = [
+  function upperCase() {
+    return keys.uppercaseLetters[Math.floor(Math.random() * keys.upperCase.length)];
+  },
+  function lowerCase() {
+    return keys.lowercaseLetters[Math.floor(Math.random() * keys.lowerCase.length)];
+  },
+  function number() {
+    return keys.numbersAll[Math.floor(Math.random() * keys.number.length)];
+  },
+  function symbol() {
+    return keys.specialCharactersAll[Math.floor(Math.random() * keys.symbol.length)];
+  }
+]
+
+
+  return newPassword;
+}
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  var choices = "";
+  // TODO Step 1
+  // check which boxes have been selected
+  // add letter to choices
+
+
+  var password = generatePassword(choices);
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -11,7 +58,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+//generateBtn.addEventListener("click", showForm);
 
 //hidden form
 function showForm(){
@@ -33,5 +80,19 @@ function validateForm(){
   }
   if (invalidInputs.length>0){
     window.alert(invalidInputs);
+    return;
   }
+  const password = document.getElementById("password");
+  const length = document.getElementById("length");
+  let pass = "";
+  while (length.value > pass.length) {
+    let keyToAdd = getKey[Math.floor(Math.random() * getKey.length)];
+    let letsChecked = document.getElementById(keyToAdd.name).checked;
+    if (letsChecked) {
+      pass += keyToAdd();
+    }
+  }
+  password.innerHTML = pass;
+  
 }
+writePassword();

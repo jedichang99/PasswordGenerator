@@ -2,7 +2,7 @@
 
 ## Description
 
-The purpose of this project was to display the power of Java Script. 
+The purpose of this project was to display the power of Java Script. Java Script is what makes this password generator work. Depending on what criteria you choose, it will make a password that suits your needs. 
 
 ## Table of Contents
 
@@ -21,7 +21,7 @@ N/A
 ## Usage
 
 Now you can go on the hosted page and follow the prompts to get a sophisticated password. you can go the website with this URL. 
-file:///Users/jedichang/bootcamp/class_work/PasswordGenerator/index.html
+
 
 ![The Whole Page](photos/wholePage.png)
 ![HTML Code](photos/HTML.png)

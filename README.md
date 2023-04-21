@@ -21,7 +21,7 @@ N/A
 ## Usage
 
 Now you can go on the hosted page and follow the prompts to get a sophisticated password. you can go the website with this URL. 
-
+https://jedichang99.github.io/PasswordGenerator/
 
 ![The Whole Page](photos/wholePage.png)
 ![HTML Code](photos/HTML.png)

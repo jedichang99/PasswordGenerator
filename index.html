@@ -30,12 +30,12 @@
           </button>
         </div>
         <div>
-          <form hidden id="form" onsubmit="validateForm();return false;">
+          <form hidden id="form">
             <label for="fname">Password Length</label><br />
             <input type="text" id="passwordLength" name="fname" /><br />
-            <input type="checkbox" id="lowercase" name="lname" />
+            <input type="checkbox" id="lowerCase" name="lname" />
             <label for="lname">Lowercase</label><br />
-            <input type="checkbox" id="uppercase" name="lname" />
+            <input type="checkbox" id="upperCase" name="lname" />
             <label for="lname">Uppercase</label><br />
             <input type="checkbox" id="numbers" name="lname" />
             <label for="lname">Numbers</label><br />
@@ -45,7 +45,7 @@
               id="btn"
               type="submit"
               value="Submit"
-              onclick="validateForm"
+              onclick="validateForm(event)"
             />
           </form>
         </div>
